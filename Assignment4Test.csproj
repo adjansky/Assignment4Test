@@ -105,6 +105,9 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Administrator\AdministratorPage.aspx" />
+    <Content Include="Administrator\CreateMember.aspx" />
+    <Content Include="Administrator\EditInstructor.aspx" />
+    <Content Include="Administrator\SectionPage.aspx" />
     <Content Include="App_Data\KarateSchool.mdf" />
     <Content Include="App_Data\KarateSchool_log.ldf">
       <DependentUpon>KarateSchool.mdf</DependentUpon>
@@ -575,6 +578,27 @@
     </Compile>
     <Compile Include="Administrator\AdministratorPage.aspx.designer.cs">
       <DependentUpon>AdministratorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\CreateMember.aspx.cs">
+      <DependentUpon>CreateMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\CreateMember.aspx.designer.cs">
+      <DependentUpon>CreateMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\EditInstructor.aspx.cs">
+      <DependentUpon>EditInstructor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\EditInstructor.aspx.designer.cs">
+      <DependentUpon>EditInstructor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\SectionPage.aspx.cs">
+      <DependentUpon>SectionPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\SectionPage.aspx.designer.cs">
+      <DependentUpon>SectionPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
