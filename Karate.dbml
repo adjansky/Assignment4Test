@@ -17,6 +17,7 @@
       <Column Name="MemberPhoneNumber" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
       <Column Name="MemberEmail" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
       <Association Name="Member_Section" Member="Sections" ThisKey="Member_UserID" OtherKey="Member_ID" Type="Section" />
+      <Association Name="Member_Payment" Member="Payments" ThisKey="Member_UserID" OtherKey="MemberID" Type="Payment" />
       <Association Name="NetUser_Member" Member="NetUser" ThisKey="Member_UserID" OtherKey="UserID" Type="NetUser" IsForeignKey="true" />
     </Type>
   </Table>
@@ -39,8 +40,20 @@
       <Column Name="Member_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Instructor_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="SectionFee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Section_Payment" Member="Payments" ThisKey="SectionID" OtherKey="SectionID" Type="Payment" />
       <Association Name="NetUser_Section" Member="NetUser" ThisKey="Instructor_ID" OtherKey="UserID" Type="NetUser" IsForeignKey="true" />
       <Association Name="Member_Section" Member="Member" ThisKey="Member_ID" OtherKey="Member_UserID" Type="Member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Payment" Member="Payments">
+    <Type Name="Payment">
+      <Column Name="PaymentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Association Name="Member_Payment" Member="Member" ThisKey="MemberID" OtherKey="Member_UserID" Type="Member" IsForeignKey="true" />
+      <Association Name="Section_Payment" Member="Section" ThisKey="SectionID" OtherKey="SectionID" Type="Section" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

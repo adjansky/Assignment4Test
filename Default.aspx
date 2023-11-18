@@ -3,39 +3,38 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <main>
-        <section class="row" aria-labelledby="aspnetTitle">
-            <h1 id="aspnetTitle">ASP.NET</h1>
-            <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-            <p><a href="http://www.asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+        <section class="row" aria-labelledby="welcomeTitle">
+            <h1 id="welcomeTitle">Welcome to Karate School</h1>
+            <p class="lead">Explore the art of Karate | Join our community to learn, grow, and excel in Karate.</p>
+            <p><a href="About.aspx" class="btn btn-primary btn-md">Discover More &raquo;</a></p>
         </section>
 
         <div class="row">
-            <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-                <h2 id="gettingStartedTitle">Getting started</h2>
+            <section class="col-md-4" aria-labelledby="membersTitle">
+                <h2 id="membersTitle">For Members</h2>
                 <p>
-                    ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+                    Access your course details, track your progress, and manage your payments. Engage with your instructors and fellow Karate enthusiasts.
                 </p>
                 <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-                </p>
-            </section>
-            <section class="col-md-4" aria-labelledby="librariesTitle">
-                <h2 id="librariesTitle">Get more libraries</h2>
-                <p>
-                    NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
+                    <a class="btn btn-default" href="Member.aspx">Member Area &raquo;</a>
                 </p>
             </section>
-            <section class="col-md-4" aria-labelledby="hostingTitle">
-                <h2 id="hostingTitle">Web Hosting</h2>
+            <section class="col-md-4" aria-labelledby="instructorsTitle">
+                <h2 id="instructorsTitle">For Instructors</h2>
                 <p>
-                    You can easily find a web hosting company that offers the right mix of features and price for your applications.
+                    Manage your sections, interact with your students, and update course content. Utilize tools to enhance the learning experience.
                 </p>
                 <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
+                    <a class="btn btn-default" href="Instructor.aspx">Instructor Area &raquo;</a>
+                </p>
+            </section>
+            <section class="col-md-4" aria-labelledby="adminTitle">
+                <h2 id="adminTitle">For Administrators</h2>
+                <p>
+                    Oversee the Karate School operations, manage member and instructor profiles, and ensure a seamless experience for all users.
+                </p>
+                <p>
+                    <a class="btn btn-default" href="Admin.aspx">Administrator Area &raquo;</a>
                 </p>
             </section>
         </div>
