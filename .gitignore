@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/bin/Assignment4Test.pdb
+/bin/Assignment4Test.dll
