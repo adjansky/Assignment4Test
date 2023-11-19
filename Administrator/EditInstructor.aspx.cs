@@ -14,7 +14,7 @@ namespace Assignment4Test.Administrator
 
         KarateDataContext dbcon;
         KarateDataContext dbcon2;
-        string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Oksan\\Source\\Repos\\AAATEST_Nov17\\App_Data\\KarateSchool.mdf;Integrated Security=True;Connect Timeout=30";
+        string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Austin\\Desktop\\AAATEST_Nov17\\AAATEST_Nov17\\App_Data\\KarateSchool.mdf;Integrated Security=True;Connect Timeout=30";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -40,6 +40,7 @@ namespace Assignment4Test.Administrator
 
                 using (SqlCommand command = new SqlCommand(deleteQuery, connection))
                 {
+                    connection.Open();
                     command.Parameters.AddWithValue("@fName", fName);
 
                     int rowsAffected = command.ExecuteNonQuery();
