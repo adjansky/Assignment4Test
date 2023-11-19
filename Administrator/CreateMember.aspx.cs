@@ -54,7 +54,7 @@ namespace Assignment4Test.Administrator
             Member myMember=new Member();
             myMember.Member_UserID=memberID;
             myMember.MemberFirstName = txtFirst.Text;
-           myMember.MemberLastName=txtLast.Text;
+            myMember.MemberLastName=txtLast.Text;
             myMember.MemberDateJoined= DateTime.Now;
             myMember.MemberPhoneNumber=txtPnone.Text;
             myMember.MemberEmail=txtEmail.Text;
